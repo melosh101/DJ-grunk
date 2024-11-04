@@ -1,6 +1,5 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
-import { albumRelations } from "~/server/db/schema";
 
 export const albumCovers = createTRPCRouter({
     getAlbum: publicProcedure.input(z.object({ id: z.string() })).query(async ({ input }) => {

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { api, HydrateClient } from "~/trpc/server";
 import Navbar from "./_components/ui/navbar";
 import Footer from "./_components/ui/footer";
@@ -41,7 +39,7 @@ Kik dig omkring og vær med til at sætte liv i kludene.
             </Carousel>
           </div>
           <div className="bg-slate-400 p-4">
-            {randomAlubms.map((album) => (<img src={"/covers/"+album.cover} alt={album.title} key={album.id} className="m-4 flex w-1/2 mx-auto"/>))}
+            {randomAlubms.map((album) => (<Image src={"/covers/"+album.cover} alt={album.title} key={album.id} width={512} height={512} className="m-4 flex w-1/2 mx-auto"/>))}
           </div>
         </div>
       </main>

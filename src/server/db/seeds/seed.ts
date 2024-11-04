@@ -1,5 +1,5 @@
 import {db} from '../index';
-import {artists, albums, reviews} from '../schema';
+import {artists, albums} from '../schema';
 import data from './albums.json';
 
 const seed = async () => {
@@ -24,7 +24,7 @@ const seed = async () => {
     return;
 };
 
-seed().then(() => {
+await seed().then(() => {
     console.log('Seed complete');
     process.exit(0);
 })
