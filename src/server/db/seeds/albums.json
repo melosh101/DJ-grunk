@@ -1,0 +1,163 @@
+[
+    {
+      "Kunstner": "Shakira",
+      "Titel": "Oral Fixation 2",
+      "Genre": "Pop",
+      "Oprettet": "12-05-2006",
+      "Pris": 100,
+      "Billede": "shakira.jpg"
+    },
+    {
+      "Kunstner": "Red Hot Chili Peppers",
+      "Titel": "Stadium Arcadium",
+      "Genre": "Rock",
+      "Oprettet": "13-06-2006",
+      "Pris": 150,
+      "Billede": "StadiumArcadium.jpg"
+    },
+    {
+      "Kunstner": "Gnarls Barkley",
+      "Titel": "St. Elsewhere",
+      "Genre": "Pop",
+      "Oprettet": "14-04-2006",
+      "Pris": 100,
+      "Billede": "Gnarls_Barkley.jpg"
+    },
+    {
+      "Kunstner": "Skousen Niels",
+      "Titel": "Daddy Longleg",
+      "Genre": "Dansk",
+      "Oprettet": "15-05-2006",
+      "Pris": 50,
+      "Billede": "SkousenDaddyLongleg.jpg"
+    },
+    {
+      "Kunstner": "Knopfler & Harris",
+      "Titel": "All The Roadrunning",
+      "Genre": "Pop",
+      "Oprettet": "16-04-2006",
+      "Pris": 100,
+      "Billede": "KnopflerHarrisRoadrunning.jpg"
+    },
+    {
+      "Kunstner": "Bruce Springsteen",
+      "Titel": "We Shall Overcome The Seeger Sessions",
+      "Genre": "Folk",
+      "Oprettet": "17-06-2006",
+      "Pris": 100,
+      "Billede": "SpringsteenOvercome.jpg"
+    },
+    {
+      "Kunstner": "Johnson",
+      "Titel": "Det Passer",
+      "Genre": "Hiphop",
+      "Oprettet": "18-05-2006",
+      "Pris": 100,
+      "Billede": "JohnsonPasser.jpg"
+    },
+    {
+      "Kunstner": "Diverse Artister",
+      "Titel": "Eurovision Song Contest 2006",
+      "Genre": "Pop",
+      "Oprettet": "19-03-2006",
+      "Pris": 50,
+      "Billede": "Eurovision.jpg"
+    },
+    {
+      "Kunstner": "Danser Med Drenge",
+      "Titel": "Vores Bedste",
+      "Genre": "Pop",
+      "Oprettet": "20-04-2006",
+      "Pris": 100,
+      "Billede": "DanserMedBedste.jpg"
+    },
+    {
+      "Kunstner": "Koppel Thomas",
+      "Titel": "Improvisationer For Klaver",
+      "Genre": "Jazz",
+      "Oprettet": "19-06-2006",
+      "Pris": 100,
+      "Billede": "KoppelImprovisationer.jpg"
+    },
+    {
+      "Kunstner": "Roy Orbison",
+      "Titel": "The Very Best Of",
+      "Genre": "Pop",
+      "Oprettet": "22-05-2006",
+      "Pris": 100,
+      "Billede": "OrbisonBestOf.jpg"
+    },
+    {
+      "Kunstner": "Juanes",
+      "Titel": "Mi Sangre",
+      "Genre": "Latin",
+      "Oprettet": "23-04-2006",
+      "Pris": 100,
+      "Billede": "JuanesMiSangre.jpg"
+    },
+    {
+      "Kunstner": "Rasmus Nøhr",
+      "Titel": "Lykkelig Smutning",
+      "Genre": "Dansk",
+      "Oprettet": "24-05-2006",
+      "Pris": 100,
+      "Billede": "RasmusNohrSmutning.jpg"
+    },
+    {
+      "Kunstner": "Sidsel",
+      "Titel": "Where Are My Shoes",
+      "Genre": "Pop",
+      "Oprettet": "25-05-2006",
+      "Pris": 100,
+      "Billede": "SidselWhereShoes.jpg"
+    },
+    {
+      "Kunstner": "Crazy Frog",
+      "Titel": "More Crazy hits",
+      "Genre": "Pop",
+      "Oprettet": "26-05-2006",
+      "Pris": 100,
+      "Billede": "CrazyFrogMore.jpg"
+    },
+    {
+      "Kunstner": "Madonna",
+      "Titel": "Confessions On A Dancefloor",
+      "Genre": "Pop",
+      "Oprettet": "27-05-2006",
+      "Pris": 100,
+      "Billede": "MadonnaConfessions.jpg"
+    },
+    {
+      "Kunstner": "Bryan Rice",
+      "Titel": "Confessional",
+      "Genre": "Dansk",
+      "Oprettet": "28-05-2006",
+      "Pris": 100,
+      "Billede": "BryanRice.jpg"
+    },
+    {
+      "Kunstner": "Michael Buble",
+      "Titel": "It's time",
+      "Genre": "Pop",
+      "Oprettet": "29-05-2006",
+      "Pris": 100,
+      "Billede": "Buble.jpg"
+    },
+    {
+      "Kunstner": "TV2",
+      "Titel": "De Første Kærester På Månen",
+      "Genre": "Dansk",
+      "Oprettet": "30-05-2006",
+      "Pris": 100,
+      "Billede": "TV2.jpg"
+    },
+    {
+      "Kunstner": "Kelly Clarkson",
+      "Titel": "Breakaway",
+      "Genre": "Pop",
+      "Oprettet": "20-05-2006",
+      "Pris": 100,
+      "Billede": "Clarkson.jpg"
+    }
+  ]
+  
