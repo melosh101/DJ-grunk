@@ -2,7 +2,12 @@ import {db} from '../index';
 import {artists, albums, reviews} from '../schema';
 import data from './albums.json';
 
-(async () => {
+const seed = async () => {
+    const album = await db.query.albums.findMany();
+    if(album.length > 0) {
+        console.log('Albums already seeded skipping');
+        return;
+    }
     for (const album of data) {
         const artist = await db.insert(artists).values({
             name: album.Kunstner,
@@ -17,4 +22,9 @@ import data from './albums.json';
         });
     }
     return;
-})()
+};
+
+seed().then(() => {
+    console.log('Seed complete');
+    process.exit(0);
+})
