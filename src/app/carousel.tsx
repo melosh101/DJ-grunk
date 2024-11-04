@@ -18,7 +18,7 @@ export const AlbumCarousel = () => {
                     delay: 5000,
                 })
             ]}
-            className="pt-5 w-full max-w-sm">
+            className="pt-5 w-full">
             <CarouselContent className="w-full">
                 {albums.isSuccess ? createCarouselItems(albums.data) :
                     <CarouselItem className="ml-24">
@@ -27,8 +27,8 @@ export const AlbumCarousel = () => {
                     </CarouselItem>
                 }
             </CarouselContent>
-            <CarouselNext className="mr-24" />
-            <CarouselPrevious className="ml-20" />
+            <CarouselNext className="mr-12" />
+            <CarouselPrevious className="ml-12" />
         </Carousel>
     )
 }

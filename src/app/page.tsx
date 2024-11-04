@@ -10,9 +10,8 @@ export default async function Home() {
   return (
     <HydrateClient>
       <Navbar />
-      <main className="flex flex-grow flex-col">
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="bg-slate-400 p-4 mt-12">
+      <main className="grid md:grid-cols-3 gap-y-20 md:gap-x-4 flex-grow">
+          <div className="bg-slate-400 p-4 h-[80%]">
             <h1 className="font-bold text-xl">Velkommen Hos DJ Grunk.</h1>
             <p className="pt-5">
               Her hos DJ Grunk kan du være med til at bestemme hvilken musik der skal indkøbes til Musikbiblioteket.
@@ -22,14 +21,17 @@ export default async function Home() {
               Kik dig omkring og vær med til at sætte liv i kludene.
               DJ Grunk.</p>
           </div>
-          <div className="bg-slate-400 p-4 overflow-hidden">
+          <div className="bg-slate-400 p-4 h-[80%] overflow-hidden">
             <h1 className="font-bold text-xl">Hot lige nu</h1>
             <AlbumCarousel />
           </div>
-          <div className="bg-slate-400 p-4">
-            {randomAlubms.map((album) => (<Image src={"/covers/" + album.cover} alt={album.title} key={album.id} width={512} height={512} className="m-4 flex w-1/2 mx-auto" />))}
+          <div className="bg-slate-400 p-4 md:grid md:grid-flow-row grid-cols-2 grid-rows-2 h-[80%]">
+            {randomAlubms.map((album) => (<div key={album.id} className="last:col-span-2">
+              <Image src={"/covers/" + album.cover} alt={album.title}  width={512} height={512} className="m-4 h-52 w-52 mx-auto" />
+              <h2 className="text-center">{album.title}</h2>
+              <p className="text-center">{album.artist.name}</p>
+            </div>))}
           </div>
-        </div>
       </main>
       <Footer />
     </HydrateClient>
