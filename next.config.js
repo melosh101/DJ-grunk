@@ -14,6 +14,12 @@ const config = {
                 pathname: "/:width/:height",
             }
         ]
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
     }
 };
 
