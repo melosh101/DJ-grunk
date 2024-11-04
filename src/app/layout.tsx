@@ -15,8 +15,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
+    <html lang="en" className={`${GeistSans.variable}`} suppressHydrationWarning>
+      <body className="flex flex-col min-h-screen">
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
