@@ -48,4 +48,7 @@ export const albumRelations = relations(albums, ({one, many}) => ({
   reviews: many(reviews),
 }))
 
+export type album = typeof albums.$inferSelect;
+export type albumWithArtist = album & { artist: typeof artists.$inferSelect };
+
 

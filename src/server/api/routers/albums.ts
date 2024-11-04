@@ -1,14 +1,22 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
+import { eq } from "drizzle-orm";
+import { albums } from "~/server/db/schema";
 
 export const albumCovers = createTRPCRouter({
-    getAlbum: publicProcedure.input(z.object({ id: z.string() })).query(async ({ input }) => {
-        return {
-            id: input.id,
-            cover: "https://via.placeholder.com/150",
-            title: "Album title",
-            artist: "Artist name",
-        };
+    getAlbum: publicProcedure.input(z.object({ id: z.number() })).query(async ({ input, ctx }) => {
+        const album = ctx.db.query.albums.findFirst({
+            where: eq(albums.id, input.id),
+            with: {
+                artist: true,
+            }
+        })
+
+        if(!album) {
+            throw new Error('Album not found');
+        }
+
+        return album;
     }),
 
     getAllAlbums: publicProcedure.query(async ({ctx}) => {
