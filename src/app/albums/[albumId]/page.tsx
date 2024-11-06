@@ -18,6 +18,7 @@ export default async function AlbumPage({params}: PageProps) {
     if(!album) {
         return <h1>Album not found</h1>
     }
+
     return (
         <HydrateClient>
             <Navbar/>

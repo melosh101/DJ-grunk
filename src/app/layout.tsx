@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-
+import { authCtx, useServerAuth} from "~/lib/auth";
 import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata: Metadata = {
@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <authCtx.Provider value={null}>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </authCtx.Provider>
       </body>
     </html>
   );

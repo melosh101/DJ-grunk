@@ -6,11 +6,14 @@
  * TL;DR - This is where all the tRPC server stuff is created and plugged in. The pieces you will
  * need to use are documented accordingly near the end.
  */
-import { initTRPC } from "@trpc/server";
+import { initTRPC, TRPCError } from "@trpc/server";
+import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adapters/request-cookies";
+import { cookies } from "next/headers";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
 import { db } from "~/server/db";
+import { SessionWithUser } from "../db/schema";
 
 /**
  * 1. CONTEXT
@@ -24,7 +27,7 @@ import { db } from "~/server/db";
  *
  * @see https://trpc.io/docs/server/context
  */
-export const createTRPCContext = async (opts: { headers: Headers }) => {
+export const createTRPCContext = async (opts: { headers: Headers, session: SessionWithUser | null }) => {
   return {
     db,
     ...opts,
@@ -96,6 +99,7 @@ const timingMiddleware = t.middleware(async ({ next, path }) => {
   return result;
 });
 
+
 /**
  * Public (unauthenticated) procedure
  *
@@ -104,3 +108,18 @@ const timingMiddleware = t.middleware(async ({ next, path }) => {
  * are logged in.
  */
 export const publicProcedure = t.procedure.use(timingMiddleware);
+
+
+export const protectedProcedure = t.procedure
+  .use(timingMiddleware)
+  .use(({ctx, next}) => {
+    if(!ctx.session || !ctx.session.user) {
+      throw new TRPCError({code: "UNAUTHORIZED"})
+    }
+
+    return next({
+      ctx: {
+        ...ctx.session, user: ctx.session.user
+      }
+    });
+  }) 

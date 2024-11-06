@@ -37,7 +37,7 @@ const createCarouselItems = (albums: albumWithArtist[]) => {
     return albums.map((album) => (
         <CarouselItem key={album.id}>
             <Link href={`/albums/${album.id}`}>
-                <Image loading="lazy" src={"/covers/" + album.cover} alt={album.title} width={150} height={150} className="mx-auto" />
+                <Image loading="lazy" src={"/covers/" + album.cover} alt={album.title} width={150} height={150} className="mx-auto md:h-80 md:w-80" />
                 <p className="text-center mt-4">{album.title} - {album.artist.name}</p>
             </Link>
         </CarouselItem>
